@@ -7,6 +7,8 @@ export const Nav = styled.nav`
   width: 100%;
   font-size: 1rem;
   font-weight: 400;
+  background-color: #24252a;
+  position: fixed;
 `;
 
 export const NavLogo = styled.div`
@@ -36,20 +38,14 @@ export const NavbarContainer = styled.div`
 export const NavIcons = styled(BiWorld)`
   color: white;
   margin-right: 0.4rem;
-  font-size: 2rem;
+  font-size: 1.2rem;
 `;
 
 export const MobileIcon = styled.div`
   display: none;
-
   @media screen and (max-width: 960px) {
     display: block;
-    /* position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 60%); */
-
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     cursor: pointer;
   }
 `;
@@ -63,10 +59,11 @@ export const NavMenu = styled.div`
     height: 90vh;
     position: absolute;
     left: 0;
-    top: ${({ click }) => (click ? "10%" : "-100%")};
+    top: ${({ click }) => (click ? "100%" : "-100vh")};
     opacity: 1;
     transition: all 0.5s ease;
     z-index: -1;
+    background-color: #24252a;
   }
 `;
 
