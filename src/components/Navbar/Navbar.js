@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-scroll";
+
+// import { Link as scroll, scrollSpy, scroller } from "react-scroll";
+
 import {
   Nav,
   NavbarContainer,
@@ -30,19 +34,28 @@ const Navbar = () => {
 
           <NavMenu onClick={handleClick} click={click}>
             <NavItem className="contenedor-link">
-              <NavLinks className="link">Home</NavLinks>
+              <NavLinks
+                to="/"
+                onClick={() => window.location.replace("/#home1")}
+              >
+                Home
+              </NavLinks>
             </NavItem>
-
             <NavItem>
-              <NavLinks>Services</NavLinks>
+              <NavLinks
+                to="/"
+                onClick={() => window.location.replace("/#serv1")}
+              >
+                Services
+              </NavLinks>
             </NavItem>
-
             <NavItem>
               <NavLinks>Products</NavLinks>
             </NavItem>
-
             <NavItem>
-              <NavButtonLink>Contact</NavButtonLink>
+              <Link to="serv1" smooth="true" duration={1000} styles="border:0">
+                <NavButtonLink to="/">Contact</NavButtonLink>
+              </Link>
             </NavItem>
           </NavMenu>
         </NavbarContainer>

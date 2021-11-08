@@ -9,6 +9,7 @@ export const Nav = styled.nav`
   font-weight: 400;
   background-color: #24252a;
   position: fixed;
+  z-index: 1;
 `;
 
 export const NavLogo = styled.div`
@@ -16,7 +17,7 @@ export const NavLogo = styled.div`
   align-items: center;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.2rem;
 `;
 
 export const NavbarContainer = styled.div`
@@ -38,7 +39,7 @@ export const NavbarContainer = styled.div`
 export const NavIcons = styled(BiWorld)`
   color: white;
   margin-right: 0.4rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 `;
 
 export const MobileIcon = styled.div`
